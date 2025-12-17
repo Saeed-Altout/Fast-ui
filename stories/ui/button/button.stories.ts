@@ -6,10 +6,23 @@ import { fn } from "storybook/test";
 const meta = {
   title: "Base/Button",
   component: Button,
-  parameters: {},
-  tags: [],
-  argTypes: {},
-  args: {},
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["outline", "ghost", "default", "link", "destructive"],
+    },
+    size: {
+      control: "select",
+      options: ["sm", "md", "lg", "icon", "icon-sm"],
+    },
+  },
+  args: {
+    onClick: fn(),
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
