@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fast UI
 
-## Getting Started
+**Fast UI** is a modern, high-performance web application foundation built with the absolute latest technologies in the React ecosystem. This starter kit is engineered for speed, scalability, and an exceptional developer experience.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+This project leverages a bleeding-edge stack to provide the best possible performance and developer tooling:
+
+- **[Next.js 16](https://nextjs.org/)**: The latest release of the React Framework, featuring advanced routing and server-side capabilities.
+- **[React 19](https://react.dev/)**: Utilizing the newest concurrent features and server actions.
+- **[Tailwind CSS 4](https://tailwindcss.com/)**: The next generation of the utility-first CSS framework, faster and more efficient.
+- **[Shadcn/UI](https://ui.shadcn.com/)**: A collection of re-usable components built using Radix UI and Tailwind CSS.
+- **[Storybook 8](https://storybook.js.org/)**: A frontend environment for building UI components in isolation, ensuring robustness and reusability.
+- **[Vitest](https://vitest.dev/)**: A blazing fast unit test framework powered by Vite.
+- **[Playwright](https://playwright.dev/)**: Reliable end-to-end testing for modern web apps.
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- **Node.js**: v20 or higher is recommended.
+- **Package Manager**: npm, yarn, pnpm, or bun.
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/your-username/fast-ui.git
+    cd fast-ui
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+### Development Server
+
+Start the Next.js development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Component Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+We use **Storybook** to document and develop components in isolation. This allows for visual testing and ensures a consistent design system.
 
-## Learn More
+To start the Storybook server:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run storybook
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Visit [http://localhost:6006](http://localhost:6006) to browse the component library.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧪 Testing
 
-## Deploy on Vercel
+### Visual Regression Testing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is configured with **Chromatic** for build-based visual testing.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run chromatic
+```
+
+### End-to-End Testing
+
+Run integration and E2E tests using **Playwright**:
+
+```bash
+npx playwright test
+```
+
+### Unit Testing
+
+Run unit tests using **Vitest**:
+
+```bash
+npx vitest
+```
+
+## 📁 Project Structure
+
+Here's an overview of the project's organization:
+
+```
+├── app/                  # Next.js App Router (Pages, Layouts, API Routes)
+├── components/           # Reusable UI components (including Shadcn/UI)
+│   ├── ui/               # Primitive UI components (buttons, inputs, etc.)
+│   └── ...
+├── lib/                  # Utility functions, shared logic, and configurations
+├── stories/              # Storybook stories for components
+├── public/               # Static assets (images, fonts, etc.)
+├── package.json          # Project dependencies and scripts
+└── ...
+```
+
+## 🤝 Contributing
+
+Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+<p align="center">
+  Developed by <a href="mailto:your.email@example.com">Your Name</a>
+</p>
